@@ -50,7 +50,11 @@ const searchTheMeal = (e) => {
     showError("Please Enter The Food Name First");
   }
 };
-const showChoosenItem = (item) => {
+const showChoosenItem = (item, random = false) => {
+  // came from random btn
+  if(random == true) {
+    document.querySelector(".show-meal-container").style.display = "none" ;
+  }
   //console.log(item)
   const meal = item.meals[0];
   const ingredients = [];
@@ -103,7 +107,7 @@ const imgContainerClicked = (e) => {
 const showRandomFood = () => {
   fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     .then((res) => res.json())
-    .then((data) => showChoosenItem(data));
+    .then((data) => showChoosenItem(data, true));
 };
 //! what the fuck
 form.addEventListener("submit", searchTheMeal);

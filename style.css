@@ -167,9 +167,8 @@ a{
     border-radius: 10px;
     max-width: 85%;
 }
-.single-meal-title{
-    font-family: statisfy;
-}
+
+
 .category-container{
     display: flex;
     justify-content: start;
@@ -192,19 +191,35 @@ a{
 .instructon-title{
     text-align: center;
     padding: 1rem 0;
+    color: rgb(255, 255, 255);
+    background-color: #444;
+    /* border-bottom: #777 2px solid; */
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+}
+.instructon-title:hover {
+    color: rgb(255, 55, 55);
 }
 .instructon-container{
     max-width: 85%;
     text-align: center;
-    padding: 2rem 0 ;
+    padding: 0 0 2rem 0 ;
     font-size: 1.4rem;
     line-height: 1.7;
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 }
 .instructon-data{
     line-height: 1.9;
     font-size: 1.6rem;
+    padding: 2rem;
+    border: 2px solid #777;
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius:19px;
+    border-top: none;
+    background-color: rgba(219, 255, 249, 0.514);
+    color: #333;
 }
 /*? single-meal-container end  */
 /*> ingredients start  */
@@ -212,8 +227,19 @@ a{
     max-width: 85%;
 }
 .ingredients-title{
+    font-weight: bold;
+    font-size: 2.4rem;
+    padding: 1.2rem 0;
     text-align: center;
     margin-top: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: #444;
+    /* border-bottom: #777 2px solid; */
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+}
+.ingredients-title:hover {
+    color: rgb(255, 55, 55);
 }
 .ingredients{
     padding: 2rem 0 ;
@@ -221,6 +247,12 @@ a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border: 2px solid #777;
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius:19px;
+    border-top: none;
+    background-color: rgba(219, 255, 249, 0.514);
+    color: #333;
 }
 .ingredient-item{
     background-color: #444;
@@ -231,6 +263,10 @@ a{
     border-radius: 25px;
     margin:  1rem;
     cursor: pointer;
+}
+.ingredient-item:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(250, 76, 76);
 }
 /*> ingredients end  */
 @media (max-width:1600px) {
@@ -325,12 +361,31 @@ a{
     } */
 }
 @media (max-width:580px) {
+    .instructon-title {
+        font-size: 1.7rem;   
+    }
+    .ingredients-title {
+        font-size: 1.7rem;  
+    }
     .ingredient-item{
         
         font-size: 1.2rem;
         padding: 1rem 1.6rem;
         border-radius: 25px;
         margin:  1rem;
+    }
+    .instructon-container{
+        max-width: 95%;
+        text-align: center;
+        padding: 0 0 2rem 0 ;
+        font-size: 1.4rem;
+        line-height: 1.7;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .ingredients-container{
+        max-width: 95%;
     }
 }
 @media (max-width:484px) {
